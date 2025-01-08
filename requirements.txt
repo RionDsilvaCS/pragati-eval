@@ -4,6 +4,7 @@ openai
 phidata
 groq
 google-generativeai
+ollama
 duckduckgo_search
 pypdf
 arxiv 
