@@ -3,6 +3,7 @@ requests
 openai
 phidata
 groq
+google-generativeai
 duckduckgo_search
 pypdf
 arxiv 
