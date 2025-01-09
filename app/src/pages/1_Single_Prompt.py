@@ -5,10 +5,10 @@ PLATFORMS_DICT = {
     "Google AI Studio":("gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-1.5-pro", "gemini-2.0-flash-exp"),
     "Groq":("gemma2-9b-it", "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "llama-guard-3-8b", "llama3-70b-8192", "llama3-8b-8192", "mixtral-8x7b-32768"),
     "OpenAI":("comming-soon"),
-    "Ollama":("gemma2:2b", "llama3.2:latest")
+    # "Ollama":("gemma2:2b", "llama3.2:latest")
     }
 
-PLATFORMS = ("Google AI Studio", "Groq", "OpenAI", "Ollama")
+PLATFORMS = ("Google AI Studio", "Groq", "OpenAI-comming-soon") # , "Ollama"
 
 tool_choice = None
 
@@ -85,11 +85,11 @@ def prompt_block(
 
 st.set_page_config(
     page_title="Single Prompt",
-    page_icon="⚖️",
+    page_icon="😎",
     layout="wide"
 )
 
-st.write("## Single Prompt Eval ⚖️")
+st.write("## Single Prompt Eval 😎")
 
 initialize_session_models()
 
@@ -104,7 +104,7 @@ with col_1:
 with col_2:
     task_choice = st.selectbox(
         "Select test type",
-        ("Query Test", "DataStore Test", "Tool Test"),
+        ("Query Test", "DataStore Test [coming soon]", "Tool Test"),
     )
 
 user_prompt = st.text_area("Query prompt 👇", placeholder="query prompt here ...")
@@ -117,7 +117,7 @@ if task_choice == "Tool Test":
         ("DuckDuckGo", "Arxiv tool", "YFinance tool"),
     )
 
-if st.button("Submit"):
+if st.button("Eval"):
     st.session_state['submit'] = True
 else:
     # if 'submit' not in st.session_state:

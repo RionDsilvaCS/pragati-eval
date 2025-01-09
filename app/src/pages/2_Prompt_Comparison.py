@@ -6,4 +6,4 @@ st.set_page_config(
 )
 
 st.write("## Prompt Comparison Eval ⚖️")
-st.write("comming soon...")
+st.write("coming soon...")

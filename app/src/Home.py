@@ -8,13 +8,17 @@ def initialize_session_keys():
     for platform_choice in st.session_state['platforms']:
         if platform_choice not in st.session_state:
             st.session_state[platform_choice] = None
-            
+       
 st.set_page_config(
-    page_title="PragatiEval",
-    page_icon="⚖️"
+    page_title="Pragati Eval",
+    page_icon="😎"
 )
 
-st.write("# Welcome to PragatiEval ⚖️")
+st.write("# Welcome to Pragati Eval 😎")
+
+st.write("A free and open-source platform designed to help developers, especially those new to AI, easily evaluate the performance of different Large Language Models (LLMs) for their specific use cases. Inspired by Maxim AI, Pragati Eval offers a user-friendly interface for streamlined LLM experimentation.")
+
+st.image("./img/hero_pic.jpg")
 
 platform_choice = st.sidebar.selectbox(
     "Select model platform",
@@ -31,7 +35,6 @@ with st.sidebar:
     for platform_choice in st.session_state['platforms']:   
         if platform_choice in st.session_state:
             if st.session_state[platform_choice] is not None:
-                # st.write(str(f'{platform_choice} API is added'))
                 st.sidebar.success(str(f'Added {platform_choice}'))
 
 initialize_session_keys()  
