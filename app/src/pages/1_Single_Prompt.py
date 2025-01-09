@@ -55,7 +55,7 @@ def prompt_block(
 
     if st.session_state['submit']:
         if query_prompt != "":
-
+            latency = 0.0
             if platform_choice == "Google AI Studio":
                 try:
                     model_response, latency = gemini_model_api(model_id=model_id, query_prompt=query_prompt, instructions=instructions, tool_name=tool_name)
