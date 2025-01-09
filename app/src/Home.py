@@ -18,7 +18,7 @@ st.write("# Welcome to Pragati Eval 😎")
 
 st.write("A free and open-source platform designed to help developers, especially those new to AI, easily evaluate the performance of different Large Language Models (LLMs) for their specific use cases. Inspired by Maxim AI, Pragati Eval offers a user-friendly interface for streamlined LLM experimentation.")
 
-st.image("./img/hero_pic.jpg")
+st.image("https://i.ibb.co/hVgQjDZ/hero-pic.jpg")
 
 platform_choice = st.sidebar.selectbox(
     "Select model platform",
